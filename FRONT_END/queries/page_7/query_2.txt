@@ -1,0 +1,1 @@
+select match_id from user_match_favourites where user_id = {}

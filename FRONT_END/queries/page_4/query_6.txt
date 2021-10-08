@@ -1,0 +1,6 @@
+select case when count=0 then 'No' else 'Yes' end as is_present from
+(
+	select count(*) from 
+	user_match_favourites 
+	where user_id={} and match_id={}
+) as t1;

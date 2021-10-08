@@ -1,0 +1,9 @@
+update users 
+set	user_first_name = '{}',
+	user_last_name = '{}',
+	user_dob = '{}',
+	user_email = '{}',
+	user_phone = '{}',
+	user_skill = '{}',
+	user_password = '{}'
+where user_id={};

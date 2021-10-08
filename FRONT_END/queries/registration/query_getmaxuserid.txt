@@ -1,0 +1,3 @@
+select case when max(user_id) is Null then 0 else max(user_id) end as usercount
+from
+    (select * from users) as dummy1
