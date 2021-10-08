@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chess Simulator</title>
+  <link href="/static/css/google_font.css" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/material.css">
+
+  <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+  <script src="{{ url_for( 'static', filename='js/main.js' ) }}"></script>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  <link rel="stylesheet" href="/static/css/login.css">
+</head>
+<body>
+  <main>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6 login-section-wrapper">
+          <div class="brand-wrapper">
+            <img src="/static/img/logo.svg" alt="logo" class="logo">
+          </div>
+          <div class="login-wrapper my-auto">
+            <h1 class="login-title">Register</h1>
+            <form id="loginform">
+              <div class="form-group">
+                <label for="uname">Username</label>
+                <input type="text" name="uname" id="registerusername" class="form-control" placeholder="enter new username" required>
+              </div>
+              <div class="form-group">
+                <label for="regname">First Name</label>
+                <input type="text" name="regname" id="registerfirstname" class="form-control" placeholder="please enter your first name" required>
+              </div>
+              <div class="form-group">
+                <label for="reglname">Last Name</label>
+                <input type="text" name="reglname" id="registerlastname" class="form-control" placeholder="please enter your last name">
+              </div>
+              <div class="form-group">
+                <label for="regdob">Date of Birth</label>
+                <input type="date" name="regdob" id="registerdob" class="form-control" value="2000-01-01" min="1980-01-01" max="2016-01-01" required>
+              </div>
+              <div class="form-group">
+                <label for="regemail">Email ID</label>
+                <input type="email" name="regemail" id="registeremail" class="form-control" placeholder="please enter your email" required>
+              </div>
+              <div class="form-group">
+                <label for="regphone">Phone Number</label>
+                <input type="tel" name="regphone" pattern="[0-9]{10}" id="registerphone" class="form-control" placeholder="please enter your 10-digit phone number" required>
+              </div>
+              <div class="form-group">
+                <label for="skill">Skill Level</label>
+                <select name="skill" id="registerskill" class="form-control">
+                  <option value="New">New to Chess</option>
+                  <option value="Beginner">Beginner</option>
+                  <option value="Intermediate">Intermediate</option>
+                  <option value="Advanced">Advanced</option>
+                  <option value="Expert">Expert</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="regpassword">Password</label>
+                <input type="password" name="regpassword" pattern=".{8,12}" id="registerpassword" class="form-control" placeholder="please enter an 8-12 digit password" required>
+              </div>
+              <input name="register" id="register" class="btn btn-block login-btn" type="button" value="Register">
+            </form>
+            <div class="alert alert-success" style="display: none;" id="successfulRegistration">
+              <strong>Success!</strong> User registered.</a>
+            </div>
+            <div class="alert alert-danger" style="display: none;" id="unsuccessfulRegistration">
+              <strong>Failed!</strong> Please try again with a different username.</a>
+            </div>
+            <a href="{{ url_for('index') }}" class="text-reset">Return to Login page</a>
+          </div>
+        </div>
+        <div class="col-sm-6 px-0 d-none d-sm-block">
+          <img src="/static/img/login.jpg" alt="login image" class="login-img">
+        </div>
+      </div>
+    </div>
+  </main>
+   <script src="/static/js/jquery.js"></script>
+  <script src="/static/js/popper.js"></script>
+  <script src="/static/js/bootstrap2.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!-- <body>
+
+
+  <h3>Login page</h3>
+
+  <form id="loginform">
+    <input type="text" id="loginusername" placeholder="Username" />
+    <input type="password" id="loginpassword" placeholder="Password" />
+    <button type="submit">Login</button>
+  </form>
+  <br><br>
+  <button id="register" type="button"><a href="{{ url_for('registration') }}">New User?</a></button>
+  <button id="guest" type="button">Continue as Guest</button>
+
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chess Simulator</title>
+  <link href="/static/css/google_font2.css" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/material.css">
+
+  <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+  <script src="{{ url_for( 'static', filename='js/main.js' ) }}"></script>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  <link rel="stylesheet" href="/static/css/login.css">
+</head>
+<body>
+  <main>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6 login-section-wrapper">
+          <div class="brand-wrapper">
+            <img src="/static/img/logo.svg" alt="logo" class="logo">
+          </div>
+          <div class="login-wrapper my-auto">
+            <h1 class="login-title">Log in</h1>
+            <form id="loginform">
+              <div class="form-group">
+                <label for="uname">Username</label>
+                <input type="text" name="uname" id="loginusername" class="form-control" placeholder="enter your username">
+              </div>
+              <div class="form-group mb-4">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="loginpassword" class="form-control" placeholder="enter your passsword">
+              </div>
+              <input name="login" id="login" class="btn btn-block login-btn" type="button" value="Login">
+            </form>
+            <div class="alert alert-danger" style="display: none;" id="unsuccessfulLogin">
+              <strong>Failed!</strong> Invalid login credentials.</a>
+            </div>
+            <p class="login-wrapper-footer-text">Don't have an account? <a href="{{ url_for('registration') }}" class="text-reset">Register here</a></p>
+            <a href="{{ url_for('home') }}" class="text-reset">Continue as Guest</a>
+          </div>
+        </div>
+        <div class="col-sm-6 px-0 d-none d-sm-block">
+          <img src="/static/img/login.jpg" alt="login image" class="login-img">
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/static/js/jquery.js"></script>
+  <script src="/static/js/popper.js"></script>
+  <script src="/static/js/bootstrap2.js"></script>
+</body>
+</html>
